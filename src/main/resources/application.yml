@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+caching:
+  spring:
+    ttlms: 43200000
+client:
+  trustpilot:
+    domain: https://www.trustpilot.com/review/
+app:
+  trustpilotservice:
+    reviewparsequery: div[id='business-unit-title'] span[role='link']
+    ratingparsequery: div[id='business-unit-title'] p[data-rating-typography=true]
+---
+spring:
+  profiles: test
+---
+spring:
+  profiles: prod
+
